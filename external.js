@@ -9,5 +9,24 @@ function getComputerChoice() {
         return "scissor";
     }
 }
+//create a function for single round game.
+function singleRound (playerSelection, computerSelection) {
+    if (playerSelection == computerSelection) {
+        return `Tie! ${playerSelection} equals ${computerSelection}`;
+    } else if (playerSelection == "rock" && computerSelection == "paper") {
+        return `You lose! ${computerSelection} beats ${playerSelection}`;
+    } else if (playerSelection == "rock" && computerSelection == "scissor") {
+        return `You win! ${playerSelection} beats ${computerSelection}`;
+    } else if (playerSelection == "paper" && computerSelection == "rock") {
+        return `You win! ${playerSelection} beats ${computerSelection}`;
+    } else if (playerSelection == "paper" && computerSelection == " scissor") {
+        return `You lose! ${computerSelection} beats ${playerSelection}`;
+    } else if (playerSelection  == "scissor" && computerSelection == "rock") {
+        return `You lose! ${computerSelection} beats ${playerSelection}`;
+    } else {
+        return `You win! ${playerSelection} beats ${computerSelection}`;
+    }
+}
 
-console.log(getComputerChoice());
+const playerChoice = "rOck";
+console.log(singleRound(playerChoice.toLowerCase(), getComputerChoice()));
