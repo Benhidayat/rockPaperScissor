@@ -1,2 +1,2 @@
 # rockPaperScissor
-building javascript simple program
+building rock, paper & scissor game.
